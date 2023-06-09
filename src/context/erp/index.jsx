@@ -4,14 +4,14 @@ import contextActions from './actions';
 import contextSelectors from './selectors';
 
 const ErpContext = createContext();
-
+//제공자
 function ErpContextProvider({ children }) {
   const [state, dispatch] = useReducer(contextReducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
 
   return <ErpContext.Provider value={value}>{children}</ErpContext.Provider>;
 }
-
+//내용
 function useErpContext() {
   const context = useContext(ErpContext);
   if (context === undefined) {

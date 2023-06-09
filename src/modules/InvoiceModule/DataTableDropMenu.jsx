@@ -42,21 +42,11 @@ export default function DataTableDropMenu({ row, entity }) {
   }
   return (
     <Menu style={{ minWidth: 130 }}>
-      <Menu.Item key={`${uniqueId()}`} icon={<EyeOutlined />} onClick={Read}>
-        Show
-      </Menu.Item>
-      <Menu.Item key={`${uniqueId()}`} icon={<CreditCardOutlined />} onClick={RecordPayment}>
-        Record Payment
-      </Menu.Item>
-      <Menu.Item key={`${uniqueId()}`} icon={<EditOutlined />} onClick={Edit}>
-        Edit
-      </Menu.Item>
-      <Menu.Item key={`${uniqueId()}`} icon={<FilePdfOutlined />} onClick={Download}>
-        Download
-      </Menu.Item>
-      <Menu.Item key={`${uniqueId()}`} icon={<DeleteOutlined />} onClick={Delete}>
-        Delete
-      </Menu.Item>
+      <Menu.Item key={`${uniqueId()}`} icon={<EyeOutlined />} onClick={Read} Items={"Show"}/>
+      <Menu.Item key={`${uniqueId()}`} icon={<CreditCardOutlined />} onClick={RecordPayment} Items={"Record Payment"}/>
+      <Menu.Item key={`${uniqueId()}`} icon={<EditOutlined />} onClick={Edit} Items={"Edit"}/>
+      <Menu.Item key={`${uniqueId()}`} icon={<FilePdfOutlined />} onClick={Download} Items={"Download"}/>
+      <Menu.Item key={`${uniqueId()}`} icon={<DeleteOutlined />} onClick={Delete} Items={"Delete"}/>
     </Menu>
   );
 }

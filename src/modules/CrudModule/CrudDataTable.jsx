@@ -48,15 +48,9 @@ function DropDownRowMenu({ row }) {
   }
   return (
     <Menu style={{ width: 130 }}>
-      <Menu.Item key={`${uniqueId()}`} icon={<EyeOutlined />} onClick={Show}>
-        Show
-      </Menu.Item>
-      <Menu.Item key={`${uniqueId()}`} icon={<EditOutlined />} onClick={Edit}>
-        Edit
-      </Menu.Item>
-      <Menu.Item key={`${uniqueId()}`} icon={<DeleteOutlined />} onClick={Delete}>
-        Delete
-      </Menu.Item>
+      <Menu.Item key={`${uniqueId()}`} icon={<EyeOutlined />} onClick={Show} Items={"Show"}/>
+      <Menu.Item key={`${uniqueId()}`} icon={<EditOutlined />} onClick={Edit} Items={"Edit"}/>
+      <Menu.Item key={`${uniqueId()}`} icon={<DeleteOutlined />} onClick={Delete} Items={"Delete"}/>
     </Menu>
   );
 }
